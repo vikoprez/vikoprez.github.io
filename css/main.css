@@ -8,7 +8,7 @@
 }
 
 html, body {
-    background-color: #404552;
+    background-color: #383c4a;
     color: white;
 }
 
@@ -19,29 +19,66 @@ body {
     padding-right: 21%;
 }
 
+footer {
+    float: right;
+    text-align: right;
+    font-size: small;
+    color: gray;
+    font-style: italic;
+    list-style: square;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Iosevka SS03 Web', monospace;
-    font-size: 36px;
     color: skyblue;
 }
 
-.navbar {
-    overflow: hidden;
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 30px;
 }
 
-.navbar a {
+hr {
+    border-top: 2px solid gray;
+}
+
+#navbar {
+    overflow: hidden;
+    min-height: auto;
+    margin-left: -1ch;
+}
+
+#navbar a {
     float: left;
     display: block;
     color: white;
-    padding-right: 15px;
+    padding-right: 1ch;
+    padding-left: 1ch;
 }
 
-.navbar a:hover {
+#navbar a:hover {
     color: lightskyblue;
     text-decoration: none;
 }
 
-.navbar a:active {
+#navbar a:active {
+    color: deepskyblue;
+    font-weight: bold;
+}
+
+#navbar a:hover::before {
+    content: ">";
+    margin-left: -1ch;
+}
+
+#navbar a:hover::after {
+    content: "_";
+    margin-right: -1ch;
+}
+
+.currentSelect {
     color: deepskyblue;
     font-weight: bold;
 }
@@ -49,8 +86,5 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 767px) {
     * {
         font-size: 15px;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 22px;
     }
 }
