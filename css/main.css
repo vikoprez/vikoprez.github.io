@@ -25,7 +25,6 @@ footer {
     font-size: small;
     color: gray;
     font-style: italic;
-    list-style: square;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -44,6 +43,16 @@ hr {
     border-top: 2px solid gray;
 }
 
+li {
+    list-style: square;
+}
+
+button {
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    cursor: pointer;
+}
+
 #navbar {
     overflow: hidden;
     min-height: auto;
@@ -53,19 +62,12 @@ hr {
 #navbar a {
     float: left;
     display: block;
-    color: white;
-    padding-right: 1ch;
     padding-left: 1ch;
 }
 
 #navbar a:hover {
     color: lightskyblue;
     text-decoration: none;
-}
-
-#navbar a:active {
-    color: deepskyblue;
-    font-weight: bold;
 }
 
 #navbar a:hover::before {
@@ -78,13 +80,37 @@ hr {
     margin-right: -1ch;
 }
 
+.unSelect {
+    color: white;
+}
+
 .currentSelect {
     color: deepskyblue;
     font-weight: bold;
 }
 
+#pageNotFound {
+    max-width: 100%;
+}
+
+#backButton {
+    background-color: #b35e6b;
+    border: none;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
 @media screen and (max-width: 767px) {
     * {
         font-size: 15px;
+    }
+    h1 {
+        font-size: 22.5px;
+    }
+    h2 {
+        font-size: 18.75px;
+    }
+    footer {
+        font-size: x-small;
     }
 }

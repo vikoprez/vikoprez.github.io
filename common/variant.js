@@ -1,7 +1,7 @@
 var navbar =
-`<a href="./index.html">About</a>
-<a href="#">Posts</a>
-<a href="#">Products</a>`;
+`<a class="unSelect" id="navbarAbout" href="./index.html">About</a>
+<a class="unSelect" id="navbarPost" href="./404.html">Posts</a>
+<a class="unSelect" id="navbarProduct"href="./products/products.html">Products</a>`;
 
 var credit =
 `Copyright © 2020 vikopromotion.<br/>Powered by Bootstrap 4.`;
@@ -11,6 +11,6 @@ $(window).on("load", function(){
     $("#credit").append(credit);
 });
 
-function currentSelect(id){
+function currentHightlight(id){
     $(id).attr("class", "currentSelect");
 };
