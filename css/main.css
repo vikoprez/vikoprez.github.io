@@ -15,11 +15,9 @@ html, body {
 body {
     font-family: 'Iosevka SS03 Web', monospace;
     font-size: 24px;
-    padding-left: 21%;
-    padding-right: 21%;
 }
 
-footer {
+.footer {
     float: right;
     text-align: right;
     font-size: small;
