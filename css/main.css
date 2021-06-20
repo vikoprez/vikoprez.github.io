@@ -15,6 +15,7 @@ html, body {
 body {
     font-family: 'Iosevka SS03 Web', monospace;
     font-size: 24px;
+    overflow: hidden;
 }
 
 .footer {
@@ -42,7 +43,52 @@ hr {
 }
 
 li {
-    list-style: square;
+    /* list-style: square; */
+}
+
+li:hover {
+    list-style-type: decimal;
+}
+
+li:hover:not(button) {
+    list-style-type: none;
+}
+
+.link-selected {
+    text-decoration: none;
+}
+
+.link-selected:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: skyblue;
+    text-decoration: none;
+}
+
+p {
+    font-size: inherit;
+}
+
+.rgb {
+    animation: none;
+}
+
+.rgb:hover {    
+    animation: color-change 1s infinite;
+}
+  
+@keyframes color-change {
+    0% { color: red; }
+    12.5% { color: orange; }
+    25% { color: yellow; }
+    37.5% { color: green; }
+    50% { color: blue; }
+    62.5% { color: indigo; }
+    75% { color: purple; }
+    87.5% { color: red; }
+    100% { color: pink; }
 }
 
 button {
@@ -96,6 +142,10 @@ button {
     border: none;
     text-decoration: none;
     padding: 10px 15px;
+}
+
+.modal-content {
+    background-color: #383c4a;
 }
 
 @media screen and (max-width: 767px) {
