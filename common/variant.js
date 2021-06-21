@@ -4,7 +4,7 @@ var navbar =
 <a class="unSelect" id="navbarProduct"href="/products/products.html">Products</a>`;
 
 var credit =
-`Copyright © 2021 vikopromotion.<br/>Powered by Bootstrap 4.`;
+`Copyright © 2021 vikopromotion.<br/>Powered by <b>Bootstrap 4</b>.`;
 
 $(window).on("load", function(){
     $("#navbar").append(navbar);

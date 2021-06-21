@@ -22,7 +22,7 @@ body {
     float: right;
     text-align: right;
     font-size: small;
-    color: gray;
+    color: lightgray;
     font-style: italic;
 }
 
@@ -39,19 +39,21 @@ h2 {
 }
 
 hr {
-    border-top: 2px solid gray;
+    border-top: 2px solid lightgray;
 }
 
 li {
-    /* list-style: square; */
+    list-style-type: disc;
+    position: relative;
 }
 
 li:hover {
     list-style-type: decimal;
+    animation: left_to_right 1s ease infinite alternate;
 }
 
-li:hover:not(button) {
-    list-style-type: none;
+li:hover::after {
+    animation: left_to_right 1s ease reverse;
 }
 
 .link-selected {
@@ -76,7 +78,7 @@ p {
 }
 
 .rgb:hover {    
-    animation: color-change 1s infinite;
+    animation: color-change 3s infinite;
 }
   
 @keyframes color-change {
@@ -87,9 +89,18 @@ p {
     50% { color: blue; }
     62.5% { color: indigo; }
     75% { color: purple; }
-    87.5% { color: red; }
-    100% { color: pink; }
+    87.5% { color: white; }
+    100% { color: red; }
 }
+
+@keyframes left_to_right {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 30px;
+    }
+  }
 
 button {
     border-radius: .25rem;
