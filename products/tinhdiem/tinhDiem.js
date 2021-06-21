@@ -109,7 +109,7 @@ $("#btnSubmit").click(function(){
     
     if (diem > 10) {
         thongBaoKQ(false, diem);
-        tbao.append("Điểm của bạn lớn hơn 10. Có ăn gian không đấy?");
+        tbao.append("Điểm của bạn lớn hơn 10, lừa nhau quá");
         tbao.attr("style", "display: block;");
         return;
     }
